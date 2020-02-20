@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/darker_gray"
+        tools:context=".MainActivity">
+
+    <GridLayout
+            android:columnCount="2"
+            android:orientation="horizontal"
+            android:rowCount="2"
+
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        <Button
+                android:text="Drawable动画"
+                android:id="@+id/btn_vector_drawable"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:background="@color/colorPrimary"
+                android:layout_width="0dp"
+                android:layout_height="0dp"/>
+
+        <Button
+                android:text="视图可见性动画"
+                android:background="@color/colorAccent"
+                android:id="@+id/btn_visibility"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_width="0dp"
+                android:layout_height="0dp"/>
+
+        <Button
+                android:text="layout"
+                android:background="@android:color/holo_orange_dark"
+                android:id="@+id/btn_layout"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_width="0dp"
+                android:layout_height="0dp"/>
+
+        <ImageView
+                android:src="@mipmap/ic_launcher_round"
+                android:transitionName="image"
+                android:text="activity"
+                android:background="@android:color/holo_green_dark"
+                android:id="@+id/btn_activity"
+                android:layout_columnWeight="1"
+                android:layout_rowWeight="1"
+                android:layout_width="0dp"
+                android:layout_height="0dp"/>
+
+
+    </GridLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-vector xmlns:android="http://schemas.android.com/apk/res/android"
+                 android:drawable="@drawable/ic_pause">
+
+    <!-- 变化内容 -->
+    <target
+            android:animation="@animator/path_pause_to_play"
+            android:name="pause"/>
+
+    <!-- 旋转 -->
+    <target
+            android:animation="@animator/rotation_play"
+            android:name="pausegroup"/>
+
+</animated-vector>

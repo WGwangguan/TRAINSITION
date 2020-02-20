@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Transitions</string>
+    <integer name="card_flip_time_full">3000</integer>
+    <integer name="card_flip_time_half">1500</integer>
+</resources>
