@@ -26,6 +26,8 @@
             android:textSize="28sp"
             android:id="@+id/text_name"
             android:text="头像"
+            android:textColor="@android:color/black"
+            android:background="@android:color/holo_orange_dark"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 

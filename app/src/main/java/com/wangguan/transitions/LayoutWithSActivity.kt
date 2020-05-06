@@ -5,8 +5,11 @@ import androidx.appcompat.app.AppCompatActivity
 import android.transition.ChangeBounds
 import android.transition.Scene
 import android.transition.TransitionManager
+import android.transition.TransitionSet
 import android.util.Log
 import android.widget.TextView
+import com.wangguan.transitions.material.custom.BackgroundColorTransition
+import com.wangguan.transitions.material.custom.TextColorTransition
 import kotlinx.android.synthetic.main.activity_transition_with_s.*
 
 class LayoutWithSActivity : AppCompatActivity() {
@@ -24,7 +27,10 @@ class LayoutWithSActivity : AppCompatActivity() {
         val sceneFirst = Scene(layout_container, firstView)
         val sceneSecond = Scene(layout_container, secondView)
 
-        val transition = ChangeBounds()
+        val transition = TransitionSet()
+            .addTransition(ChangeBounds())
+//            .addTransition(BackgroundColorTransition())
+            .setDuration(2000L)
         layout_container.addView(firstView)
 
         firstView.setOnClickListener {

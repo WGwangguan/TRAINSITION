@@ -9,13 +9,30 @@
             android:roundIcon="@mipmap/ic_launcher_round"
             android:supportsRtl="true"
             android:theme="@style/BaseTheme">
-        <activity android:name=".SpringActivity"></activity>
-        <activity android:name=".LayoutWithoutSActivity"></activity>
-        <activity android:name=".LayoutWithSActivity"></activity>
-        <activity android:name=".TransitionActivity"></activity>
-        <activity android:name=".LayoutActivity"></activity>
-        <activity android:name=".DrawableActivity"></activity>
-        <activity android:name=".VisibilityActivity"></activity>
+        <activity
+                android:name=".material.container.FabActivity"
+                android:label="@string/title_activity_fab"
+                android:theme="@style/BaseTheme.NoActionBar" />
+        <activity android:name=".material.fade.FadeActivity" />
+        <activity android:name=".material.fadeThrough.FadeThroughActivity" />
+        <activity android:name=".material.axis.AxisDetailActivity" />
+        <activity android:name=".material.axis.AxisActivity" />
+        <activity android:name=".material.container.ContainerActivity" />
+        <activity android:name=".material.container.DetailActivity" />
+        <activity android:name=".material.MaterialActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".SpringActivity" />
+        <activity android:name=".LayoutWithoutSActivity" />
+        <activity android:name=".LayoutWithSActivity" />
+        <activity android:name=".TransitionActivity" />
+        <activity android:name=".LayoutActivity" />
+        <activity android:name=".DrawableActivity" />
+        <activity android:name=".VisibilityActivity" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

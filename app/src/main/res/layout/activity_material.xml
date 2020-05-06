@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@android:drawable/divider_horizontal_textfield"
+        android:orientation="vertical"
+        android:showDividers="middle"
+        tools:context=".material.MaterialActivity">
+
+    <TextView
+            android:id="@+id/text_container"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Container"
+            android:textSize="28sp" />
+
+    <TextView
+            android:id="@+id/text_shared_axis"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Shared axis"
+            android:textSize="28sp" />
+
+    <TextView
+            android:id="@+id/text_fade_through"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Fade through"
+            android:textSize="28sp" />
+
+    <TextView
+            android:id="@+id/text_fade"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Fade"
+            android:textSize="28sp" />
+
+</LinearLayout>

@@ -2,4 +2,8 @@
     <string name="app_name">Transitions</string>
     <integer name="card_flip_time_full">3000</integer>
     <integer name="card_flip_time_half">1500</integer>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_fab">FabActivity</string>
 </resources>

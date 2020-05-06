@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:transitionGroup="true"
+        tools:context=".material.axis.AxisActivity">
+
+    <Button
+            android:id="@+id/btn_first"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="粉刷匠"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+            android:id="@+id/btn_second"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="小毛驴"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/btn_first" />
+
+    <FrameLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            app:layout_constraintLeft_toRightOf="@id/btn_first"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+                android:id="@+id/text_first"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="我是一个粉刷匠，粉刷本领强，还有一个小鼻子，真呀真漂亮。"
+                android:textSize="20sp" />
+
+        <TextView
+                android:id="@+id/text_second"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="我有一只小毛驴我从来也不骑，有一天我心血来潮骑它去赶集，我手里拿着小皮鞭真呀真得意，不知怎么哗啦啦的落了一身泥。"
+                android:textSize="20sp"
+                android:visibility="gone" />
+
+    </FrameLayout>
+
+    <Button
+            android:id="@+id/btn_next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="next"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintRight_toRightOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

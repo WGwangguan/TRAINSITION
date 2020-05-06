@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="20dp"
+        tools:context=".material.container.DetailActivity">
+
+    <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="我是 Title我是 Title我是 Title"
+            android:textColor="@android:color/black"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+            android:id="@+id/text_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="我是 content我是 content我是 content我是 content我是 content我是 content我是 content我是 content我是 content我是 content我是 content我是 content我是 content我是 content我是 content我是 content我是 content我是 content我是 content我是 content我是 content我是 content我是 content我是 content我是 content我是 content我是 content我是 content我是 content我是 content我是 content我是 content我是 content我是 content我是 content我是 content我是 content我是 content我是 content我是 content我是 content我是 content我是 content我是 content我是 content我是 content我是 content我是 content"
+            android:textSize="20sp"
+            android:transitionName="shared_element_fab" />
+
+</LinearLayout>

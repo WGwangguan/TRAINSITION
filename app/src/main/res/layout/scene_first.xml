@@ -3,7 +3,7 @@
         xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:id="@+id/layout_container"
-        android:layout_width="wrap_content" android:layout_height="wrap_content">
+        android:layout_width="match_parent" android:layout_height="match_parent">
 
     <ImageView
             app:layout_constraintTop_toTopOf="parent"
@@ -14,13 +14,15 @@
             android:layout_height="wrap_content"/>
 
     <TextView
+            android:background="@color/colorAccent"
             app:layout_constraintLeft_toRightOf="@id/image_icon"
             app:layout_constraintTop_toTopOf="@id/image_icon"
             app:layout_constraintBottom_toBottomOf="@id/image_icon"
             android:layout_marginLeft="16dp"
-            android:textSize="20sp"
+            android:textSize="28sp"
             android:id="@+id/text_name"
             android:text="头像"
+            android:textColor="@android:color/white"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"/>
 
