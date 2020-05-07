@@ -23,19 +23,21 @@ class BackgroundColorTransition : Transition() {
         "com.wangguan.transitions.material.custom.BackgroundColorTransition:background"
 
     override fun captureStartValues(transitionValues: TransitionValues?) {
-        Log.i("ddd","captureStartValues ")
         captureValues(transitionValues)
+        Log.i("ddd","captureStartValues ${transitionValues?.view}")
     }
 
     override fun captureEndValues(transitionValues: TransitionValues?) {
-        Log.i("ddd","captureEndValues ")
         captureValues(transitionValues)
+        Log.i("ddd","captureEndValues ${transitionValues?.view}")
+
     }
 
     private fun captureValues(transitionValues: TransitionValues?) {
-        transitionValues ?: return
-        val view = transitionValues.view
-        transitionValues.values[PROPNAME_BACKGROUND] = view.background
+        // 将需要跟踪的属性塞到 values 里面
+        transitionValues?.also {
+            it.values[PROPNAME_BACKGROUND] = it.view.background
+        }
     }
 
     override fun createAnimator(
@@ -43,34 +45,31 @@ class BackgroundColorTransition : Transition() {
         startValues: TransitionValues?,
         endValues: TransitionValues?
     ): Animator? {
-        if (null == startValues || null == endValues) {
-            return null
-        }
+        Log.i("ddd","createAnimator ${startValues?.view}  ${endValues?.view}")
+        startValues ?: return null
+        endValues ?: return null
 
         val view: View = endValues.view
 
+        // 根据属性 key 取出前后的背景
         val startBackground = startValues.values[PROPNAME_BACKGROUND] as Drawable?
         val endBackground = endValues.values[PROPNAME_BACKGROUND] as Drawable?
 
-        Log.i("ddd","createAnimator $startBackground  $endBackground")
 
+        // 格式判断
         if (startBackground is ColorDrawable && endBackground is ColorDrawable) {
-            val startColor = startBackground
-            val endColor = endBackground
 
-            Log.i("ddd","createAnimator color ${startColor.color}  ${endColor.color}")
-
-
-            if (startColor.color != endColor.color) {
+            // 前后颜色发生改变才执行动画
+            if (startBackground.color != endBackground.color) {
                 val animator = ValueAnimator.ofObject(
                     ArgbEvaluator(),
-                    startColor.color, endColor.color
+                    startBackground.color, endBackground.color
                 )
                 animator.addUpdateListener { animation ->
                     val value = animation.animatedValue
 
                     if (null != value) {
-                        Log.i("ddd","set backgroud $value")
+                        // 不断更新背景以达到平滑过渡效果
                         view.setBackgroundColor(value as Int)
                     }
                 }

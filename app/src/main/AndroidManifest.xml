@@ -20,11 +20,11 @@
         <activity android:name=".material.container.ContainerActivity" />
         <activity android:name=".material.container.DetailActivity" />
         <activity android:name=".material.MaterialActivity">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+<!--            <intent-filter>-->
+<!--                <action android:name="android.intent.action.MAIN" />-->
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+<!--                <category android:name="android.intent.category.LAUNCHER" />-->
+<!--            </intent-filter>-->
         </activity>
         <activity android:name=".SpringActivity" />
         <activity android:name=".LayoutWithoutSActivity" />

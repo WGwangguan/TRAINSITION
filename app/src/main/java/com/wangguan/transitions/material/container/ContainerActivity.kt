@@ -114,7 +114,7 @@ class ContainerActivity : AppCompatActivity() {
         }
 
         fab_bottom.setOnClickListener {
-            TransitionManager.beginDelayedTransition(layout_text_container, change)
+            TransitionManager.beginDelayedTransition(layout_text_container, Explode())
             if (text_top.visibility == View.VISIBLE) {
                 text_top.visibility = View.GONE
                 text_bottom.visibility = View.VISIBLE

@@ -1,13 +1,13 @@
 package com.wangguan.transitions
 
 import android.os.Bundle
-import androidx.appcompat.app.AppCompatActivity
 import android.transition.ChangeBounds
 import android.transition.Scene
 import android.transition.TransitionManager
 import android.transition.TransitionSet
 import android.util.Log
 import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
 import com.wangguan.transitions.material.custom.BackgroundColorTransition
 import com.wangguan.transitions.material.custom.TextColorTransition
 import kotlinx.android.synthetic.main.activity_transition_with_s.*
@@ -29,7 +29,8 @@ class LayoutWithSActivity : AppCompatActivity() {
 
         val transition = TransitionSet()
             .addTransition(ChangeBounds())
-//            .addTransition(BackgroundColorTransition())
+            .addTransition(BackgroundColorTransition())
+            .addTransition(TextColorTransition())
             .setDuration(2000L)
         layout_container.addView(firstView)
 

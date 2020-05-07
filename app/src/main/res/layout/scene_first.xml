@@ -1,29 +1,29 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
-        android:id="@+id/layout_container"
-        android:layout_width="match_parent" android:layout_height="match_parent">
+        android:id="@+id/layout_containers"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
 
     <ImageView
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintLeft_toLeftOf="parent"
-            android:src="@mipmap/ic_launcher"
             android:id="@+id/image_icon"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:layout_height="wrap_content"
+            android:src="@mipmap/ic_launcher"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-            android:background="@color/colorAccent"
-            app:layout_constraintLeft_toRightOf="@id/image_icon"
-            app:layout_constraintTop_toTopOf="@id/image_icon"
-            app:layout_constraintBottom_toBottomOf="@id/image_icon"
-            android:layout_marginLeft="16dp"
-            android:textSize="28sp"
             android:id="@+id/text_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:background="@color/colorAccent"
             android:text="头像"
             android:textColor="@android:color/white"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"/>
+            android:textSize="28sp"
+            app:layout_constraintBottom_toBottomOf="@id/image_icon"
+            app:layout_constraintLeft_toRightOf="@id/image_icon"
+            app:layout_constraintTop_toTopOf="@id/image_icon" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
