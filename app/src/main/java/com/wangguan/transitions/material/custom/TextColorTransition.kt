@@ -3,7 +3,6 @@ package com.wangguan.transitions.material.custom
 import android.animation.Animator
 import android.animation.ArgbEvaluator
 import android.animation.ValueAnimator
-import android.content.res.ColorStateList
 import android.transition.Transition
 import android.transition.TransitionValues
 import android.view.ViewGroup

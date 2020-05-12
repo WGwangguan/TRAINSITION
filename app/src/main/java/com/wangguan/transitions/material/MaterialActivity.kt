@@ -3,12 +3,16 @@ package com.wangguan.transitions.material
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import com.bumptech.glide.Glide
 import com.wangguan.transitions.R
 import com.wangguan.transitions.material.axis.AxisActivity
 import com.wangguan.transitions.material.container.ContainerActivity
 import com.wangguan.transitions.material.fade.FadeActivity
 import com.wangguan.transitions.material.fadeThrough.FadeThroughActivity
 import kotlinx.android.synthetic.main.activity_material.*
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 
 class MaterialActivity : AppCompatActivity() {
 
@@ -30,6 +34,11 @@ class MaterialActivity : AppCompatActivity() {
 
         text_fade.setOnClickListener {
             startActivity(Intent(this, FadeActivity::class.java))
+        }
+
+        Glide.get(this@MaterialActivity).clearMemory()
+        CoroutineScope(Dispatchers.IO).launch {
+            Glide.get(this@MaterialActivity).clearDiskCache()
         }
 
     }

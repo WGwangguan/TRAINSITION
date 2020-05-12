@@ -10,12 +10,16 @@ import android.transition.*
 import android.util.Log
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
+import com.bumptech.glide.Glide
 import com.google.android.material.transition.Hold
 import com.google.android.material.transition.MaterialArcMotion
 import com.google.android.material.transition.MaterialContainerTransform
 import com.google.android.material.transition.MaterialContainerTransformSharedElementCallback
 import com.wangguan.transitions.R
 import kotlinx.android.synthetic.main.activity_container.*
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 
 class ContainerActivity : AppCompatActivity() {
 

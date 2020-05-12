@@ -30,7 +30,6 @@ class LayoutWithSActivity : AppCompatActivity() {
         val transition = TransitionSet()
             .addTransition(ChangeBounds())
             .addTransition(BackgroundColorTransition())
-            .addTransition(TextColorTransition())
             .setDuration(2000L)
         layout_container.addView(firstView)
 
